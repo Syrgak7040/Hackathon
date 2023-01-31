@@ -53,10 +53,10 @@ const Navbar = () => {
       <div className="navbarCenter">
         {/* <div className="navbarCenterO"> */}
         <div className="navbarCenterLeft">
-          <Link to>
+          <Link to="/">
             <img className="logoSvg" src={logo} alt="" />
+            <span className="sportExpert">SportExpert</span>
           </Link>
-          <span className="sportExpert">SportExpert</span>
         </div>
         <div className="navbarCenterRight">
           <input

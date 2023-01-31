@@ -68,6 +68,7 @@
   font-weight: 800;
   color: rgb(182, 17, 17);
   margin-top: 1.2rem;
+  cursor: pointer;
 }
 
 .logoSvg {
@@ -145,13 +146,14 @@
     width: 83rem;
   }
   .logoSvg {
-    margin-top: 2rem;
+    margin-top: -2rem;
     padding-top: 0px;
     width: 6rem;
   }
   .navbarCenterLeft {
     display: flex;
-    margin-left: 100px;
+    /* margin-left: 80px; */
+    text-decoration: none;
     /* margin-right: 20rem; */
   }
   .navbarCenterRight {
@@ -177,6 +179,12 @@
     font-size: 1rem;
     font-weight: 600;
   }
+  .sportExpert {
+    font-size: 4.3rem;
+    font-weight: 700;
+    color: rgb(182, 17, 17);
+    margin-top: 1rem;
+  }
 }
 
 @media screen and (max-width: 1023px) {
@@ -184,25 +192,24 @@
     font-size: 3.5rem;
     font-weight: 700;
     color: rgb(182, 17, 17);
-    margin-top: 0.8rem;
+    margin-top: 2.8rem;
   }
   .logoSvg {
-    margin-top: 2rem;
-    padding-top: 0px;
-    width: 3.8rem;
+    margin-left: 5rem;
+    margin-top: -1rem;
+    /* padding-top: -100rem; */
+    width: 4rem;
   }
-  /* .navbarCenterO {
-    display: flex;
-    justify-content: space-around;
-  } */
+
   .navbarCenterLeft {
     display: flex;
-    margin-left: 250px;
+    /* margin-left: 250px; */
     /* margin-right: 20rem; */
   }
   .navbarCenterRight {
     display: flex;
     padding-left: 100px;
+    height: 40px;
   }
   .navbarBottom {
     display: flex;
@@ -210,6 +217,89 @@
     text-align: center;
     padding-top: 0.1rem;
     cursor: pointer;
-    width: 92rem;
+    width: 78rem;
+  }
+  .navbarCenter {
+    height: 120px;
+  }
+  .inputNavbarCenter {
+    width: 25rem;
+    height: 2.1rem;
+    border-radius: 2rem;
+    /* margin-right: 1rem; */
+    /* margin-left: 1rem; */
+    /* padding-left: 100px; */
+  }
+  .btnMag {
+    /* background-color: rgb(129, 10, 10); */
+    width: 3.6 rem;
+    height: 2rem;
+    border-color: white;
+    margin-right: -8rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    .navbarTop {
+      margin-left: -10rem;
+      width: 78.5rem;
+    }
+
+    .ulRight {
+      display: flex;
+      justify-content: end;
+      list-style-type: none;
+      margin-right: 0px;
+      width: 25rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .logoSvg {
+      margin-left: 3.5rem;
+      margin-top: -1rem;
+      /* padding-top: -100rem; */
+      width: 4rem;
+    }
+    .sportExpert {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: rgb(182, 17, 17);
+      margin-top: 2.8rem;
+    }
+    .inputNavbarCenter {
+      display: flex;
+      padding-top: -25rem;
+      width: 19rem;
+      height: -17.5rem;
+      border-radius: 2rem;
+      margin-top: -2rem;
+    }
+    .navbarCenter {
+      height: 75px;
+    }
+    .btnMag {
+      /* background-color: rgb(129, 10, 10); */
+      display: flex;
+      width: 3.6 rem;
+      height: 2rem;
+      border-color: white;
+      margin-right: -27rem;
+      margin-top: -2rem;
+    }
+
+    .links {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+      text-align: center;
+      margin-top: 0.2rem;
+      /* margin-left: 20px; */
+    }
+    .lisss {
+      margin-left: 2rem;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 500;
+    }
   }
 }
