@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Brand from "./components/Navbar/Brand";
 import Navbar from "./components/Navbar/Navbar";
@@ -13,6 +14,7 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+
+
 
 export default App;
