@@ -1,0 +1,22 @@
+.car__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+}
+.customitem {
+  width: 800px;
+}
+.car__r {
+  width: 400px;
+  margin: 0 30px 10px 30px;
+}
+.car__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.car__r2 {
+  width: 400px;
+  margin: 0 30px 0 30px;
+}
