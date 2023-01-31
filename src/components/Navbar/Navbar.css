@@ -1,0 +1,215 @@
+.navbarTop {
+  background-color: rgb(218, 26, 26);
+  display: flex;
+  width: 96rem;
+  margin-left: -7.5rem;
+}
+
+.navbarTopLeft {
+  margin-left: 6.25rem;
+  padding-top: 1rem;
+}
+
+.ulLeft {
+  display: flex;
+  list-style-type: none;
+  width: 37.5rem;
+}
+
+.liLeft {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.a {
+  text-decoration: none;
+}
+
+.navbarTopRight {
+  padding-top: 1rem;
+}
+
+.ulRight {
+  display: flex;
+  justify-content: end;
+  list-style-type: none;
+  margin-right: 0px;
+  width: 37.5rem;
+}
+
+.instagramLogo {
+  width: 2rem;
+  height: 1.2rem;
+  background-color: red;
+}
+
+.f {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.theme {
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: 2rem;
+}
+
+.brands {
+  width: 74.25rem;
+}
+
+.sportExpert {
+  font-size: 5rem;
+  font-weight: 800;
+  color: rgb(182, 17, 17);
+  margin-top: 1.2rem;
+}
+
+.logoSvg {
+  margin-top: -2rem;
+  padding-top: 0px;
+}
+
+.inputNavbarCenter {
+  width: 37rem;
+  height: 2.75rem;
+  border-radius: 2rem;
+}
+
+.btnMag {
+  /* background-color: rgb(129, 10, 10); */
+  width: 2.6 rem;
+  height: 3rem;
+  border-color: white;
+}
+
+.navbarCenter {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 3.5rem;
+  height: 9rem;
+}
+
+.navbarCenterRight {
+  margin-top: 3rem;
+}
+
+.liKatalog {
+  list-style-type: none;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-left: 4.6rem;
+}
+
+.navbarBottom {
+  display: flex;
+  background-color: rgb(218, 26, 26);
+  text-align: center;
+  padding-top: 0.6rem;
+  cursor: pointer;
+  width: 96rem;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  text-align: center;
+  margin-top: 0.7rem;
+  /* margin-left: 20px; */
+}
+
+.lisss {
+  margin-left: 3.75rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.catalogDrop {
+  margin-top: 0.1875rem;
+}
+
+.drop {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbarTop {
+    width: 83rem;
+  }
+  .logoSvg {
+    margin-top: 2rem;
+    padding-top: 0px;
+    width: 6rem;
+  }
+  .navbarCenterLeft {
+    display: flex;
+    margin-left: 100px;
+    /* margin-right: 20rem; */
+  }
+  .navbarCenterRight {
+    display: flex;
+    padding-left: 50px;
+  }
+  .inputNavbarCenter {
+    width: 28rem;
+    height: 2.75rem;
+    border-radius: 2rem;
+  }
+  .navbarBottom {
+    display: flex;
+    background-color: rgb(218, 26, 26);
+    text-align: center;
+    padding-top: 0.6rem;
+    cursor: pointer;
+    width: 78rem;
+  }
+  .lisss {
+    margin-left: 2.25rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .sportExpert {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgb(182, 17, 17);
+    margin-top: 0.8rem;
+  }
+  .logoSvg {
+    margin-top: 2rem;
+    padding-top: 0px;
+    width: 3.8rem;
+  }
+  /* .navbarCenterO {
+    display: flex;
+    justify-content: space-around;
+  } */
+  .navbarCenterLeft {
+    display: flex;
+    margin-left: 250px;
+    /* margin-right: 20rem; */
+  }
+  .navbarCenterRight {
+    display: flex;
+    padding-left: 100px;
+  }
+  .navbarBottom {
+    display: flex;
+    background-color: rgb(218, 26, 26);
+    text-align: center;
+    padding-top: 0.1rem;
+    cursor: pointer;
+    width: 92rem;
+  }
+}
