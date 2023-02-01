@@ -1,12 +1,12 @@
 import "./App.css";
-import AddProduct from "./components/Product/AddProduct";
-import ProductList from "./components/Product/ProductList";
+import Navbar from "./components/Navbar";
+import MainRoutes from "./MainRoutes";
 
 function App() {
   return (
     <div className="App">
-      <AddProduct />
-      <ProductList />
+      <Navbar />
+      <MainRoutes />
     </div>
   );
 }

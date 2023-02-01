@@ -9,11 +9,11 @@ import ProductContextProvider from "./contexts/ProductContextProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ProductContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <ProductContextProvider>
         <App />
-      </BrowserRouter>
-    </ProductContextProvider>
+      </ProductContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

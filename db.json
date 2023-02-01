@@ -1,16 +1,25 @@
 {
   "products": [
     {
-      "title": "Cool Helmet",
-      "price": "100000",
+      "title": "Helmet",
+      "price": 141399,
       "img": "https://sportexpert.kg/wp-content/uploads/2020/11/6936417_1280x1280-270x270.jpg",
+      "category": "helmet",
       "id": 1
     },
     {
-      "title": "Boots",
+      "title": "Shoes",
       "price": "235235",
       "img": "https://sportexpert.kg/wp-content/uploads/2017/12/0000198658151_moon_boot-vega_tf_24101200001_zo_0001-270x270.jpg",
+      "category": "Shoes",
       "id": 2
+    },
+    {
+      "title": "Cairn Meteor",
+      "price": "134235",
+      "img": "https://sportexpert.kg/wp-content/uploads/2021/05/METEOR-Shiny-Black-Red-Racing-270x270.jpg",
+      "category": "helmet",
+      "id": 4
     }
   ]
 }
