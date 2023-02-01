@@ -41,7 +41,24 @@
 .reebok__name a {
   text-decoration: none;
 }
-.footer {
-  background-color: rgb(40, 40, 40);
-  margin-top: 100px;
+
+.insta__imgs {
+  display: flex;
+  margin: 0 auto;
+}
+
+@media (max-width: 1150px) {
+  .inner__insta {
+    width: 900px;
+  }
+}
+@media (max-width: 930px) {
+  .inner__insta {
+    width: 700px;
+  }
+}
+@media (max-width: 680px) {
+  .inner__insta {
+    width: 500px;
+  }
 }
