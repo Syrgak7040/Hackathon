@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "title": "Cool Helmet",
+      "price": "100000",
+      "img": "https://sportexpert.kg/wp-content/uploads/2020/11/6936417_1280x1280-270x270.jpg",
+      "id": 1
+    },
+    {
+      "title": "Boots",
+      "price": "235235",
+      "img": "https://sportexpert.kg/wp-content/uploads/2017/12/0000198658151_moon_boot-vega_tf_24101200001_zo_0001-270x270.jpg",
+      "id": 2
+    }
+  ]
+}
