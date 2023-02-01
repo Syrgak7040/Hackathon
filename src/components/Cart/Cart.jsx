@@ -5,15 +5,15 @@ import { useCart } from "../../contexts/CardContextProvider";
 import CartItem from "./CartItem";
 
 const Cart = () => {
-  // const { cart, getCart, clearCart } = useCart();
-  // useEffect(() => {
-  //   getCart();
-  // }, []);
+  const { cart, getCart, clearCart } = useCart();
+  useEffect(() => {
+    getCart();
+  }, []);
 
   return (
     <>
       <h1>My Cart</h1>
-      {/* <Container>
+      <Container>
         {cart?.products.map((cartItem) => {
           {
             return <CartItem item={cartItem} key={cartItem.item.id} />;
@@ -25,7 +25,7 @@ const Cart = () => {
           BUY
         </Button>
         <Typography fontSize={21}> Total Price: {cart?.totalPrice}</Typography>
-      </Container> */}
+      </Container>
     </>
   );
 };

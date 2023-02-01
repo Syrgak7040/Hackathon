@@ -1,8 +1,10 @@
 import axios from "axios";
-import React, { createContext, useReducer } from "react";
+import React, { createContext, useContext, useReducer } from "react";
 import { API } from "../helpers/consts";
 
 export const productContext = createContext();
+
+export const useProduct = () => useContext(productContext);
 
 const INIT_STATE = {
   products: [],
