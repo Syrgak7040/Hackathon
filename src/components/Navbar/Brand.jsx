@@ -1,10 +1,11 @@
 import React from "react";
+import Navbar from "./Navbar";
 // import Navbar from "./components/Navbar/Navbar";
 
 const Brand = () => {
   return (
     <div>
-      {/* <Navbar />; */}
+      <Navbar />;
       <div className="brands">
         <h1 className="theme">БРЕНДЫ</h1>
         <hr />

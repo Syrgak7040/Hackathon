@@ -6,8 +6,28 @@ import poisk from "./../svg/poisk.svg";
 import bars from "./../svg/bars.svg";
 import DropDowns from "./DropDowns";
 import Catalog from "./CatalogDowns";
-
+import { useState } from "react";
+import axios from "axios";
+import { useEffect } from "react";
+import admin from "./../svg/admin.svg";
 const Navbar = () => {
+  // const [products, setProducts] = useState([]);
+  // const getProducts = () => {
+  //   axios.get("http://localhost:8000/products").then((response) => {
+  //     setProducts(response.data);
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   getProducts();
+  // }, []);
+
+  // const [value, setValue] = useState("");
+
+  // const filterProducts = products.filter((product) => {
+  //   return product.title.toLowerCase().includes(value.toLowerCase());
+  // });
+
   return (
     <div>
       <div className="container">
@@ -18,10 +38,15 @@ const Navbar = () => {
                 <li className="liLeft">БРЕНДЫ</li>
               </Link>
 
-              <a className="a" href="https://www.facebook.com/SportExpert.kg/">
+              <a
+                target="_blank"
+                className="a"
+                href="https://www.facebook.com/SportExpert.kg/"
+              >
                 <li className="liLeft">FACEBOOK</li>
               </a>
               <a
+                target="_blank"
                 className="a"
                 href="https://www.instagram.com/sportexpert_kyrgyzstan/"
               >
@@ -31,10 +56,15 @@ const Navbar = () => {
           </div>
           <div className="navbarTopRight">
             <ul className="ulRight">
-              <a className="a" href="https://www.facebook.com/SportExpert.kg/">
+              <a
+                target="_blank"
+                className="a"
+                href="https://www.facebook.com/SportExpert.kg/"
+              >
                 <li className="f">F</li>
               </a>
               <a
+                target="_blank"
                 className="a"
                 href="https://www.instagram.com/sportexpert_kyrgyzstan/"
               >
@@ -46,6 +76,11 @@ const Navbar = () => {
                   />
                 </li>
               </a>
+              <Link to="/admin">
+                <button className="btnAdmin">
+                  <img className="adminLogo" src={admin} alt="" />
+                </button>
+              </Link>
             </ul>
           </div>
         </div>
@@ -53,7 +88,7 @@ const Navbar = () => {
       <div className="navbarCenter">
         {/* <div className="navbarCenterO"> */}
         <div className="navbarCenterLeft">
-          <Link to="/">
+          <Link className="sss" to="/">
             <img className="logoSvg" src={logo} alt="" />
             <span className="sportExpert">SportExpert</span>
           </Link>
@@ -63,11 +98,17 @@ const Navbar = () => {
             className="inputNavbarCenter"
             type="text"
             placeholder="ㅤㅤ  Поиск товаров..."
+            // onChange={(e) => setValue(e.target.value)}
           />
           <button className="btnMag">
             <img src={poisk} alt="" />
           </button>
-          {/* </div> */}
+          <div className="products">
+            {/* {filterProducts.map((product, index) => {
+              // сюда нужно вести страничку с прдуктами
+              // return <ProductList product={product} key={index} />;
+            })} */}
+          </div>
         </div>
       </div>
       <div className="navbarBottom">
