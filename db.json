@@ -1,17 +1,18 @@
 {
   "products": [
     {
-      "title": "Boots",
-      "price": "235235",
-      "img": "https://sportexpert.kg/wp-content/uploads/2017/12/0000198658151_moon_boot-vega_tf_24101200001_zo_0001-270x270.jpg",
-      "id": 2
+      "title": "chevrolet",
+      "price": 789675,
+      "img": "https://avatars.mds.yandex.net/get-autoru-vos/1723628/b004fe0235664fb3151931ad4315387f/320x240",
+      "category": "car",
+      "id": 1
     },
     {
-      "title": "",
-      "price": 0,
-      "img": "",
-      "type": "",
-      "id": 3
+      "title": "maclaren",
+      "price": "352676",
+      "img": "https://i.pinimg.com/originals/5d/da/5d/5dda5d719adb505f35dc864b9a44d2cb.jpg",
+      "category": "car",
+      "id": 2
     }
   ]
 }

@@ -13,6 +13,9 @@ const Navbar = () => {
           <Link to="create">
             <Nav.Item>Create</Nav.Item>
           </Link>
+          <Link to="cart">
+            <Nav.Item>Cart</Nav.Item>
+          </Link>
         </Nav>
       </Container>
     </div>

@@ -1,4 +1,4 @@
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/CardContextProvider";
@@ -19,6 +19,15 @@ const Cart = () => {
             return <CartItem item={cartItem} key={cartItem.item.id} />;
           }
         })}
+        {/* <Box
+          component="img"
+          sx={{
+            height: 50,
+            width: 50,
+          }}
+          src={item.item.img}
+          alt={item.item.title}
+        /> */}
       </Container>
       <Container>
         <Button variant="outlined" onClick={clearCart}>

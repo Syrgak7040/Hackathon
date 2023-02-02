@@ -1,7 +1,11 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Carousel } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { productContext } from "../../contexts/ProductContextProvider";
+import { useCart } from "../../contexts/CardContextProvider";
+import {
+  productContext,
+  useProduct,
+} from "../../contexts/ProductContextProvider";
 import Bottom from "../bottom/Bottom";
 import Carousel1 from "../carousel/Carousel1";
 import Footer from "../footer/Footer";
@@ -13,6 +17,7 @@ const ProductList = () => {
   useEffect(() => {
     getProducts();
   }, []);
+  const { addProductToCart } = useCart();
 
   return (
     <div
@@ -41,9 +46,14 @@ const ProductList = () => {
             <Button onClick={() => editProduct(item.id)}>Edit</Button>
           </Link>
           <Button onClick={() => deleteProduct(item.id)}>Delete</Button>
-          <Link to="/cart">
-            <Button onClick={() => editProduct(item.id)}>add</Button>
-          </Link>
+
+          <Button
+            onClick={() => {
+              addProductToCart(item);
+            }}
+          >
+            add
+          </Button>
         </Card>
       ))}
       <Carousel1 />
