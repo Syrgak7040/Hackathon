@@ -25,13 +25,14 @@ const AddProduct = () => {
   }
   return (
     <div>
-      <div style={{ backgroundColor: "red" }}>
+      <div style={{ backgroundColor: "#ff4747" }}>
         <input
           style={{
             margin: "60px 4px",
             width: "320px",
             height: "25px",
             borderRadius: "50px",
+            border: "none",
             textAlign: "center",
             fontSize: "large",
           }}
@@ -46,6 +47,7 @@ const AddProduct = () => {
             width: "320px",
             height: "25px",
             borderRadius: "50px",
+            border: "none",
             textAlign: "center",
             fontSize: "large",
           }}
@@ -60,6 +62,7 @@ const AddProduct = () => {
             width: "320px",
             height: "25px",
             borderRadius: "50px",
+            border: "none",
             textAlign: "center",
             fontSize: "large",
           }}
@@ -73,6 +76,7 @@ const AddProduct = () => {
             width: "320px",
             height: "25px",
             borderRadius: "50px",
+            border: "none",
             textAlign: "center",
             fontSize: "large",
           }}
@@ -84,12 +88,13 @@ const AddProduct = () => {
         <Link to="/">
           <button
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#c71a0e",
               color: "white",
               borderColor: "white",
+              border: "none",
               margin: "4px",
               width: "140px",
-              height: "25px",
+              height: "28px",
               borderRadius: "50px",
               textAlign: "center",
               fontSize: "large",
@@ -103,7 +108,7 @@ const AddProduct = () => {
       </div>
       <h2
         style={{
-          backgroundColor: "red",
+          backgroundColor: "#ff4747",
           color: "white",
           height: "40px",
           marginTop: "30px",
@@ -131,7 +136,7 @@ const AddProduct = () => {
           <p style={{ fontWeight: "bold" }}>{`${inpPrice}`}</p>
         </Card>
       </div>
-      <div style={{ backgroundColor: "red", height: "40px" }}></div>
+      <div style={{ backgroundColor: "#ff4747", height: "40px" }}></div>
     </div>
   );
 };

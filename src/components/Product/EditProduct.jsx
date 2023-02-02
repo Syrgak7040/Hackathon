@@ -6,10 +6,6 @@ import { productContext } from "../../contexts/ProductContextProvider";
 const EditProduct = () => {
   const { productToEdit, saveEdit } = useContext(productContext);
   const [newEditItem, setNewEditItem] = useState(productToEdit);
-  const [inpTitle, setInpTitle] = useState("");
-  const [inpPrice, setInpPrice] = useState("");
-  const [inpImg, setInpImg] = useState("");
-  const [inpCategory, setInpCategory] = useState("");
 
   const navigate = useNavigate();
 
@@ -31,13 +27,14 @@ const EditProduct = () => {
     <div>
       {newEditItem ? (
         <>
-          <div style={{ backgroundColor: "red" }}>
+          <div style={{ backgroundColor: "#ff9d26" }}>
             <input
               style={{
                 margin: "60px 4px",
                 width: "320px",
                 height: "25px",
                 borderRadius: "50px",
+                border: "none",
                 textAlign: "center",
                 fontSize: "large",
               }}
@@ -53,6 +50,7 @@ const EditProduct = () => {
                 width: "320px",
                 height: "25px",
                 borderRadius: "50px",
+                border: "none",
                 textAlign: "center",
                 fontSize: "large",
               }}
@@ -68,6 +66,7 @@ const EditProduct = () => {
                 width: "320px",
                 height: "25px",
                 borderRadius: "50px",
+                border: "none",
                 textAlign: "center",
                 fontSize: "large",
               }}
@@ -82,6 +81,7 @@ const EditProduct = () => {
                 width: "320px",
                 height: "25px",
                 borderRadius: "50px",
+                border: "none",
                 textAlign: "center",
                 fontSize: "large",
               }}
@@ -93,13 +93,14 @@ const EditProduct = () => {
             />
             <button
               style={{
-                backgroundColor: "red",
+                backgroundColor: "#c9740c",
                 color: "white",
                 borderColor: "white",
                 margin: "4px",
                 width: "140px",
-                height: "25px",
+                height: "30px",
                 borderRadius: "50px",
+                border: "none",
                 textAlign: "center",
                 fontSize: "large",
               }}
@@ -113,13 +114,13 @@ const EditProduct = () => {
           </div>
           <h2
             style={{
-              backgroundColor: "red",
+              backgroundColor: "#ff9d26",
               color: "white",
               height: "40px",
               marginTop: "30px",
             }}
           >
-            Your product:
+            Your edit:
           </h2>
           <div style={{ display: "flex", justifyContent: "center" }}>
             <Card
@@ -142,7 +143,7 @@ const EditProduct = () => {
               <p style={{ fontWeight: "bold" }}>{`${newEditItem.price}`}</p>
             </Card>
           </div>
-          <div style={{ backgroundColor: "red", height: "40px" }}></div>
+          <div style={{ backgroundColor: "#ff9d26", height: "40px" }}></div>
         </>
       ) : (
         "Loading..."
