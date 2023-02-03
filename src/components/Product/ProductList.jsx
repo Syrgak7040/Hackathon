@@ -51,13 +51,7 @@ const ProductList = () => {
             label="helmets"
           />
           <FormControlLabel value="skates" control={<Radio />} label="skates" />
-          <FormControlLabel value="shoes" control={<Radio />} label="shoes" />
-          <FormControlLabel
-            value="clothes"
-            control={<Radio />}
-            label="clothes"
-          />
-          <FormControlLabel value="skis" control={<Radio />} label="skis" />
+          <FormControlLabel value="plants" control={<Radio />} label="plants" />
           <FormControlLabel value="other" control={<Radio />} label="other" />
           <FormControlLabel value="what" control={<Radio />} label="what" />
         </RadioGroup>
