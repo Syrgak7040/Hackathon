@@ -5,7 +5,6 @@ import Navbar from "./Navbar";
 const Brand = () => {
   return (
     <div>
-      <Navbar />;
       <div className="brands">
         <h1 className="theme">БРЕНДЫ</h1>
         <hr />

@@ -18,7 +18,6 @@ const AdminPage = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="admin">
         <div className="adminSmall">
           <div className="headerLock">

@@ -1,15 +1,16 @@
 import React, { useContext, useEffect } from "react";
 import { Button, Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { productContext } from "../../contexts/ProductContextProvider";
 
 const ProductList = () => {
   const { products, getProducts, deleteProduct, editProduct } =
     useContext(productContext);
-
+  const [searchParams] = useSearchParams();
   useEffect(() => {
-    getProducts();
-  }, []);
+    // console.log(searchParams);
+    getProducts(searchParams.get("q"));
+  }, [searchParams]);
 
   return (
     <div

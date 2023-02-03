@@ -1,7 +1,24 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
+import ProductList from "../Product/ProductList";
 
 function Catalog() {
+  const [categories, setCategories] = useState([]);
+
+  const getCategories = async () => {
+    const res = await axios.get("http://localhost:8000/products");
+    const allCategories = res.data.map((product) => {
+      return product.category;
+    });
+    setCategories(allCategories);
+  };
+
+  useEffect(() => {
+    getCategories();
+  }, []);
+
   return (
     <DropdownButton
       className="catalogDrop"
@@ -9,15 +26,11 @@ function Catalog() {
       title="КАТАЛОГ"
     >
       {/* <Dropdown.ItemText>Dropdown item text</Dropdown.ItemText> */}
-      <Dropdown.Item as="button">Туризмб Альпинизм</Dropdown.Item>
-      <Dropdown.Item as="button">Лыжи</Dropdown.Item>
-      <Dropdown.Item as="button">Сноуборд</Dropdown.Item>
-      <Dropdown.Item as="button">Велоспорт</Dropdown.Item>
-      <Dropdown.Item as="button">Скейты, ролики, коньки</Dropdown.Item>
-      <Dropdown.Item as="button">Одежда</Dropdown.Item>
-      <Dropdown.Item as="button">Обувь</Dropdown.Item>
-      <Dropdown.Item as="button">Очки, аксессуары</Dropdown.Item>
-      <Dropdown.Item as="button">Уход</Dropdown.Item>
+      {categories.map((category, index) => (
+        <Dropdown.Item as="button" key={index}>
+          {category}
+        </Dropdown.Item>
+      ))}
     </DropdownButton>
   );
 }

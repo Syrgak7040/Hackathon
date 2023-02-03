@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import navbarCss from "././Navbar.css";
 import logo from "./../svg/logo.svg";
 import poisk from "./../svg/poisk.svg";
@@ -10,23 +10,18 @@ import { useState } from "react";
 import axios from "axios";
 import { useEffect } from "react";
 import admin from "./../svg/admin.svg";
+import plus from "./../svg/plus.svg";
+import ProductList from "../Product/ProductList";
+
 const Navbar = () => {
-  // const [products, setProducts] = useState([]);
-  // const getProducts = () => {
-  //   axios.get("http://localhost:8000/products").then((response) => {
-  //     setProducts(response.data);
-  //   });
-  // };
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [value, setValue] = useState("");
 
-  // useEffect(() => {
-  //   getProducts();
-  // }, []);
-
-  // const [value, setValue] = useState("");
-
-  // const filterProducts = products.filter((product) => {
-  //   return product.title.toLowerCase().includes(value.toLowerCase());
-  // });
+  useEffect(() => {
+    setSearchParams({
+      q: value,
+    });
+  }, [value]);
 
   return (
     <div>
@@ -98,17 +93,13 @@ const Navbar = () => {
             className="inputNavbarCenter"
             type="text"
             placeholder="ㅤㅤ  Поиск товаров..."
-            // onChange={(e) => setValue(e.target.value)}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
           />
           <button className="btnMag">
             <img src={poisk} alt="" />
           </button>
-          <div className="products">
-            {/* {filterProducts.map((product, index) => {
-              // сюда нужно вести страничку с прдуктами
-              // return <ProductList product={product} key={index} />;
-            })} */}
-          </div>
+          <div className="products"></div>
         </div>
       </div>
       <div className="navbarBottom">
@@ -127,6 +118,14 @@ const Navbar = () => {
           <li className="lisss">ГАЛЕРИЕ</li>
           <li className="lisss">
             <DropDowns />
+          </li>
+          <li className="lisss">
+            <Link to={"/qwer"}>
+              <button className="btnPlus">
+                <span>New Product</span>
+                <img src={plus} alt="" />
+              </button>
+            </Link>
           </li>
         </ul>
       </div>
