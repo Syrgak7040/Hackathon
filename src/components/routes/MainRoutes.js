@@ -8,6 +8,9 @@ import AddProduct from "../Product/AddProduct";
 import Carousel1 from "../carousel/Carousel1";
 import Footer from "../footer/Footer";
 import Bottom from "../bottom/Bottom";
+import NavbarProd from "../NavbarProd";
+import AdminPage from "../Navbar/AdminPage";
+import Brand from "../Navbar/Brand";
 // import Cart from "../Cart/Cart";
 
 const MainRoutes = () => {
@@ -21,6 +24,9 @@ const MainRoutes = () => {
       <Route path="/edit" element={<EditProduct />} />
       <Route path="/create" element={<AddProduct />} />
       <Route path="/cart" element={<CartPage />} />
+      <Route path="/qwer" element={<NavbarProd />} />
+      <Route path="/admin" element={<AdminPage />} />
+      <Route path="/brand" element={<Brand />} />
     </Routes>
   );
 };

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Button, Card, Carousel } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import { useCart } from "../../contexts/CardContextProvider";
 import {
   productContext,
@@ -14,9 +14,13 @@ const ProductList = () => {
   const { products, getProducts, deleteProduct, editProduct } =
     useContext(productContext);
 
+  const [searchParams] = useSearchParams();
+
   useEffect(() => {
-    getProducts();
-  }, []);
+    // getProducts();
+    getProducts(searchParams.get("q"));
+  }, [searchParams]);
+
   const { addProductToCart } = useCart();
 
   return (

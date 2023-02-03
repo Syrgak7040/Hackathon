@@ -12,17 +12,6 @@ const INIT_STATE = {
   productDetails: {},
 };
 
-// function reducer(state = INIT_STATE, action) {
-//   switch (action.type) {
-//     case "GET_PRODUCTS":
-//       return { ...state, products: action.payload };
-//     case "GET_PRODUCT_DETAILS":
-//       return { ...state, productDetails: action.payload };
-//     default:
-//       return state;
-//   }
-// }
-
 const reducer = (state = INIT_STATE, action) => {
   switch (action.type) {
     case "GET_PRODUCTS":
@@ -36,35 +25,20 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
-  // const navigate = useNavigate();
-  // const location = useLocation();
 
-  // console.log(location);
-  // const getProducts = async () => {
-  //   try {
-  //     let res = await axios(`${API}${window.location.search}`);
-  //     dispatch({
-  //       type: "GET_PRODUCTS",
-  //       payload: res.data,
-  //     });
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  const getProducts = async () => {
-    const { data } = await axios(`${API}`);
+  const getProducts = async (searchParams) => {
+    const { data } = await axios(`${API}?q=${searchParams || ""}`);
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,
     });
   };
+
   //////////////
 
   const addProduct = async (obj) => {
     try {
       await axios.post(API, obj);
-      // navigate("/cart");
     } catch (error) {
       console.log(error);
     }
@@ -93,6 +67,7 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
   };
   ////////////
+
   const getProductDetails = async (id) => {
     try {
       let res = await axios(`${API}/${id}`);
@@ -115,33 +90,8 @@ const ProductContextProvider = ({ children }) => {
     }
   };
 
-  const fetchByParams = (query, value) => {
-    // const search = new URLSearchParams(location.search);
-    // https://github.com/typicode/json-server/?q
-    // if (value === "all") {
-    //   search.delete(query);
-    // } else {
-    //   search.set(query, value);
-    // }
-    // const url = `${location.pathname}?${search.toString()}`;
-    // console.log(location);
-    // console.log();
-    // navigate(url);
-    // getProducts();
-  };
+  const fetchByParams = (query, value) => {};
 
-  // let value = {
-  //   products: state.products,
-  //   productDetails: state.productDetails,
-
-  //   getProducts,
-  //   addProduct,
-  //   deleteProduct,
-
-  //   getProductDetails,
-  //   saveEditProduct,
-  //   fetchByParams,
-  // };
   return (
     <productContext.Provider
       value={{

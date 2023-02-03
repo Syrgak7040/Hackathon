@@ -29,8 +29,33 @@
   }
   .car__r {
     margin: 0;
+    width: 350px;
   }
   .car__r2 {
     margin: 0;
+    width: 350px;
+  }
+  .customitem {
+    width: 700px;
+  }
+}
+
+@media (max-width: 800px) {
+  .car__box {
+    flex-wrap: wrap;
+  }
+  .car__right {
+    flex-direction: row;
+  }
+  .car__r {
+    margin: 0;
+    width: 250px;
+  }
+  .car__r2 {
+    margin: 0;
+    width: 250px;
+  }
+  .customitem {
+    width: 500px;
   }
 }

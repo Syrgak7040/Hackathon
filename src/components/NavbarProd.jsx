@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const NavbarProd = () => {
   return (
     <div>
       <Container>
@@ -10,10 +10,10 @@ const Navbar = () => {
           <Link to="/">
             <Nav.Item>Products</Nav.Item>
           </Link>
-          <Link to="create">
+          <Link to="/create">
             <Nav.Item>Create</Nav.Item>
           </Link>
-          <Link to="cart">
+          <Link to="/cart">
             <Nav.Item>Cart</Nav.Item>
           </Link>
         </Nav>
@@ -22,4 +22,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavbarProd;

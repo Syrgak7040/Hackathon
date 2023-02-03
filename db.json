@@ -2,7 +2,7 @@
   "products": [
     {
       "title": "chevrolet",
-      "price": 789675,
+      "price": 789677,
       "img": "https://avatars.mds.yandex.net/get-autoru-vos/1723628/b004fe0235664fb3151931ad4315387f/320x240",
       "category": "car",
       "id": 1
@@ -13,6 +13,27 @@
       "img": "https://i.pinimg.com/originals/5d/da/5d/5dda5d719adb505f35dc864b9a44d2cb.jpg",
       "category": "car",
       "id": 2
+    },
+    {
+      "title": "destroyer",
+      "price": "999999",
+      "img": "https://i.insider.com/5d1b7157a17d6c0319490902?width=1130&format=jpeg",
+      "category": "ship",
+      "id": 3
+    },
+    {
+      "title": "plane",
+      "price": "3245635",
+      "img": "https://images.moneycontrol.com/static-mcnews/2021/09/Air-India.jpg?impolicy=website&width=1600&height=900",
+      "category": "plane",
+      "id": 4
+    },
+    {
+      "title": "jet",
+      "price": "34524",
+      "img": "https://ichef.bbci.co.uk/news/976/cpsprodpb/22D9/production/_101912980_a350-ulr_rr_sia_v45_resized.jpg",
+      "category": "plane",
+      "id": 5
     }
   ]
 }
