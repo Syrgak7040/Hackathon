@@ -6,15 +6,39 @@ const NavbarProd = () => {
   return (
     <div>
       <Container>
-        <Nav>
+        <Nav style={{ display: "flex", justifyContent: "space-around" }}>
           <Link to="/">
-            <Nav.Item>Products</Nav.Item>
+            <Nav.Item
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                color: "black",
+              }}
+            >
+              Products
+            </Nav.Item>
           </Link>
           <Link to="/create">
-            <Nav.Item>Create</Nav.Item>
+            <Nav.Item
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                color: "black",
+              }}
+            >
+              Create
+            </Nav.Item>
           </Link>
           <Link to="/cart">
-            <Nav.Item>Cart</Nav.Item>
+            <Nav.Item
+              style={{
+                textDecoration: "none",
+                fontSize: "20px",
+                color: "black",
+              }}
+            >
+              Cart
+            </Nav.Item>
           </Link>
         </Nav>
       </Container>

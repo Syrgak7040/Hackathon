@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { productContext } from "../../contexts/ProductContextProvider";
 import { Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import NavbarProd from "../NavbarProd";
 
 const AddProduct = () => {
   const [inpTitle, setInpTitle] = useState("");
@@ -25,6 +26,7 @@ const AddProduct = () => {
   }
   return (
     <div>
+      <NavbarProd />
       <div style={{ backgroundColor: "#ff4747" }}>
         <input
           style={{

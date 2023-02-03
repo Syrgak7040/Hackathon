@@ -89,7 +89,7 @@ const Navbar = () => {
                 }
                 alt=""
               />
-              <span className="sportExpert">SportExpert</span>
+              <span className="sportExpert">MakersExpress</span>
             </Link>
           </div>
           <div className="navbarCenterRight">
@@ -113,22 +113,30 @@ const Navbar = () => {
         </div>
         <div className="navbarBottom">
           <ul>
-            <li className="liKatalog">
-              {/* <img src={bars} alt="" /> */}
-              <Catalog />
-            </li>
+            <li className="liKatalog">{/* <img src={bars} alt="" /> */}</li>
           </ul>
           <ul className="links">
             <li className="lisss">НОВОЕ ПОСТУПЛЕНИЕ</li>
 
             <li className="lisss">КОНТАКТЫ</li>
-            <li className="lisss">ГАЛЕРИЕ</li>
+            {/* <li className="lisss">ГАЛЕРЕЯ</li> */}
+            <Nav>
+              <Link className="sss" to="/">
+                <Nav.Item className="lissss">PRODUCTS</Nav.Item>
+              </Link>
+              <Link className="sss" to="/create">
+                <Nav.Item className="lissss">CREATE</Nav.Item>
+              </Link>
+              <Link className="sss" to="/cart">
+                <Nav.Item className="lissss">CART</Nav.Item>
+              </Link>
+            </Nav>
             <li className="lisss">
               <DropDowns />
             </li>
             <li className="lisss">
               <Link to={"/qwer"}>
-                <button className="btnPlus">
+                {/* <button className="btnPlus">
                   <span>New Product</span>
                   <img
                     src={
@@ -136,7 +144,7 @@ const Navbar = () => {
                     }
                     alt=""
                   />
-                </button>
+                </button> */}
               </Link>
             </li>
           </ul>

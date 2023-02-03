@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useEffect, useState } from "react";
 import { useCart } from "../../contexts/CardContextProvider";
+import NavbarProd from "../NavbarProd";
 import CartItem from "./CartItem";
 
 const Cart = () => {
@@ -12,6 +13,7 @@ const Cart = () => {
 
   return (
     <>
+      <NavbarProd />
       <h1>My Cart</h1>
       <Container>
         {cart?.products.map((cartItem) => {

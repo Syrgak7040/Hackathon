@@ -25,9 +25,15 @@ const reducer = (state = INIT_STATE, action) => {
 
 const ProductContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
+  //////////////////////
 
-  const getProducts = async (searchParams) => {
-    const { data } = await axios(`${API}?q=${searchParams || ""}`);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  //////////////////////
+
+  const getProducts = async () => {
+    const { data } = await axios(`${API}${window.location.search}`);
     dispatch({
       type: "GET_PRODUCTS",
       payload: data,
@@ -68,29 +74,31 @@ const ProductContextProvider = ({ children }) => {
   };
   ////////////
 
-  const getProductDetails = async (id) => {
-    try {
-      let res = await axios(`${API}/${id}`);
-      dispatch({
-        type: "GET_PRODUCT_DETAILS",
-        payload: res.data,
-      });
-    } catch (error) {
-      console.log(error);
+  const fetchByParams = async (query, value) => {
+    const search = new URLSearchParams(location.search);
+    if (value === "all") {
+      search.delete(query);
+    } else {
+      search.set(query, value);
     }
+    const url = `${location.pathname}?${search.toString()}`;
+    navigate(url);
+    getProducts();
   };
 
-  const saveEditProduct = async (id, obj) => {
-    try {
-      await axios.patch(`${API}/${id}`, obj);
-      getProducts();
-      // navigate("/products");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  ////////////////////
 
-  const fetchByParams = (query, value) => {};
+  // const getProductDetails = async (id) => {
+  //   try {
+  //     let res = await axios(`${API}/${id}`);
+  //     dispatch({
+  //       type: "GET_PRODUCT_DETAILS",
+  //       payload: res.data,
+  //     });
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
 
   return (
     <productContext.Provider
