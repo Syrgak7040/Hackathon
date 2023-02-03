@@ -10,12 +10,24 @@ import {
 import Bottom from "../bottom/Bottom";
 import Carousel1 from "../carousel/Carousel1";
 import Footer from "../footer/Footer";
+import Pagination from "../pagination/Pagination";
 
 const ProductList = () => {
+  ///////////
+  let active = 2;
+  let items = [];
+  for (let number = 1; number <= 5; number++) {
+    items.push(
+      <Pagination.Item key={number} active={number === active}>
+        {number}
+      </Pagination.Item>
+    );
+  }
+  //////////
   const { products, getProducts, deleteProduct, editProduct, fetchByParams } =
     useContext(productContext);
 
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   useEffect(() => {
     // getProducts();
@@ -29,7 +41,6 @@ const ProductList = () => {
       style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
     >
       {/* /////////// */}
-
       <div style={{ marginTop: "32px" }}>
         <div
           style={{
@@ -69,7 +80,6 @@ const ProductList = () => {
           <FormControlLabel value="what" control={<Radio />} label="what" />
         </RadioGroup>
       </div>
-
       {/*  //////////////*/}
       {products.map((item) => (
         <Card
@@ -154,11 +164,12 @@ const ProductList = () => {
           </Button>
         </Card>
       ))}
+
+      <Pagination />
       <Carousel1 />
       <Bottom />
       <Footer />
     </div>
   );
 };
-
 export default ProductList;
