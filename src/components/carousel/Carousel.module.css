@@ -1,0 +1,61 @@
+.car__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 0;
+}
+.customitem {
+  width: 800px;
+}
+.car__r {
+  width: 400px;
+  margin: 0 30px 10px 30px;
+}
+.car__right {
+  display: flex;
+  flex-direction: column;
+}
+
+.car__r2 {
+  width: 400px;
+  margin: 0 30px 0 30px;
+}
+@media (max-width: 1100px) {
+  .car__box {
+    flex-wrap: wrap;
+  }
+  .car__right {
+    flex-direction: row;
+  }
+  .car__r {
+    margin: 0;
+    width: 350px;
+  }
+  .car__r2 {
+    margin: 0;
+    width: 350px;
+  }
+  .customitem {
+    width: 700px;
+  }
+}
+
+@media (max-width: 800px) {
+  .car__box {
+    flex-wrap: wrap;
+  }
+  .car__right {
+    flex-direction: row;
+  }
+  .car__r {
+    margin: 0;
+    width: 250px;
+  }
+  .car__r2 {
+    margin: 0;
+    width: 250px;
+  }
+  .customitem {
+    width: 500px;
+  }
+}

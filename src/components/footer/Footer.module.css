@@ -1,0 +1,47 @@
+.mountain {
+  height: 700px;
+  width: 1600px;
+  position: relative;
+  display: flex;
+  margin-top: 30px;
+  max-width: 100%;
+}
+.insta {
+  width: 100px;
+  height: 70px;
+}
+.text__back {
+  width: 700px;
+  height: 465px;
+  background-color: rgb(28, 28, 28);
+  position: absolute;
+  opacity: 0.1;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.insta__header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+.inner__insta {
+  width: 1200px;
+  text-align: start;
+}
+.reebok {
+  width: 200px;
+  height: 200px;
+  margin: 50px 5px 0 5px;
+}
+.reebok__name a {
+  text-decoration: none;
+}
+.footer {
+  background-color: rgb(40, 40, 40);
+  margin-top: 100px;
+}
