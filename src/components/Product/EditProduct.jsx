@@ -57,7 +57,7 @@ const EditProduct = () => {
               name="price"
               onChange={handleCreate}
               placeholder="price"
-              type="number:"
+              type="number"
               value={newEditItem.price}
             />
             <input
@@ -140,7 +140,7 @@ const EditProduct = () => {
                 />
               </div>
               <p>{`${newEditItem.title}`}</p>
-              <p style={{ fontWeight: "bold" }}>{`${newEditItem.price}`}</p>
+              <p style={{ fontWeight: "bold" }}>{`${newEditItem.price}$`}</p>
             </Card>
           </div>
           <div style={{ backgroundColor: "#ff9d26", height: "40px" }}></div>

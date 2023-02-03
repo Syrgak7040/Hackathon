@@ -2,10 +2,11 @@ import {
   FormControl,
   FormControlLabel,
   FormLabel,
+  Pagination,
   Radio,
   RadioGroup,
 } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { productContext } from "../../contexts/ProductContextProvider";
@@ -21,6 +22,7 @@ const ProductList = () => {
   return (
     <div
       style={{ display: "flex", justifyContent: "center", flexWrap: "wrap" }}
+      spacing={3}
     >
       <div style={{ marginTop: "32px" }}>
         <div
@@ -39,7 +41,7 @@ const ProductList = () => {
         <RadioGroup
           aria-labelledby="demo-radio-buttons-group-label"
           defaultValue="all"
-          onChange={(e) => fetchByParams("type", e.target.value)}
+          onChange={(e) => fetchByParams("category", e.target.value)}
           name="radio-buttons-group"
         >
           <FormControlLabel value="all" control={<Radio />} label="all" />
@@ -57,6 +59,7 @@ const ProductList = () => {
           />
           <FormControlLabel value="skis" control={<Radio />} label="skis" />
           <FormControlLabel value="other" control={<Radio />} label="other" />
+          <FormControlLabel value="what" control={<Radio />} label="what" />
         </RadioGroup>
       </div>
       {products.map((item) => (

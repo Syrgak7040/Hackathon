@@ -52,7 +52,7 @@ const AddProduct = () => {
             fontSize: "large",
           }}
           placeholder="Price:"
-          type="number:"
+          type="number"
           value={inpPrice}
           onChange={(e) => setInpPrice(e.target.value)}
         />
@@ -133,7 +133,7 @@ const AddProduct = () => {
             />
           </div>
           <p>{`${inpTitle}`}</p>
-          <p style={{ fontWeight: "bold" }}>{`${inpPrice}`}</p>
+          <p style={{ fontWeight: "bold" }}>{`${inpPrice}$`}</p>
         </Card>
       </div>
       <div style={{ backgroundColor: "#ff4747", height: "40px" }}></div>
